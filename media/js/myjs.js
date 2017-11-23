@@ -40,6 +40,11 @@ function formatDate( pubDate )
     // jquery
     $(function() {
 
+        if ($(".linked-in-image").children("a").attr("onClick")){
+            var linkattrVal = 	$(".linked-in-image").children("a").attr("onClick").replace(/'\)/,"?9')");
+            $(".linked-in-image").children("a").attr("onClick", linkattrVal);
+        }
+
         $(".p_meet-the-team").includeFeed({
             baseSettings: {
                 rssURL: ["/consultantsrss.aspx"],
